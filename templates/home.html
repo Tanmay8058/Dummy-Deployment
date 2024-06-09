@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="home-content">
+    <h1>Welcome to the House Price Prediction Model</h1>
+    <p>We use advanced machine learning techniques to predict house prices based on various features.</p>
+    <p>This model is built using XGBoost and has an accuracy of 89%. Before finalizing on XGBoost, we also experimented with several other models including:</p>
+    <ul>
+        <li>Linear Regression</li>
+        <li>Lasso Regression</li>
+        <li>Ridge Regression</li>
+        <li>Random Forest Regressor</li>
+        <li>Decision Tree Regressor</li>
+    </ul>
+    <a class="button" href="{{ url_for('predict') }}">Go to Predict Page</a>
+</div>
+{% endblock %}

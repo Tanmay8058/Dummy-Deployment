@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('predict') }}">Predict</a></li>
+            </ul>
+        </nav>
+        <h1>{{ title }}</h1>
+    </header>
+    <div class="container">
+        {% block content %}
+        {% endblock content %}
+    </div>
+    <footer>
+        <p>House Price Prediction Model &copy; 2024</p>
+    </footer>
+    <!-- House images -->
+    <div class="image-gallery">
+        <img src="{{ url_for('static', filename='house1.jpg') }}" alt="House Image 1">
+        <img src="{{ url_for('static', filename='house2.jpg') }}" alt="House Image 2">
+        <img src="{{ url_for('static', filename='house3.jpg') }}" alt="House Image 3">
+    </div>
+</body>
+</html>
